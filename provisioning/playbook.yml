@@ -1,0 +1,22 @@
+---
+- hosts: all
+  user: vagrant
+
+  tasks:
+    - name: update apt cache
+
+    - name: install git
+
+    - name: install build-essential
+
+    - name: install node.js
+
+    - name: install mongodb
+
+    - name: install express
+
+    - name: install bower
+
+    - name: install forever
+
+    - name: 
