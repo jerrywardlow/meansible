@@ -1,6 +1,6 @@
 ---
 - hosts: all
-  user: vagrant
+  become: true
 
   tasks:
     - name: update apt cache
@@ -19,4 +19,4 @@
 
     - name: install forever
 
-    - name: 
+    - name:
