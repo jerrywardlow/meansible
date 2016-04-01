@@ -1,6 +1,6 @@
 ---
 - hosts: all
-  user: vagrant
+  become: true
 
   tasks:
     - name: Update apt cache
