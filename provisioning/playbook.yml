@@ -3,11 +3,14 @@
   user: vagrant
 
   tasks:
-    - name: update apt cache
+    - name: Update apt cache
+      apt: update_cache=yes
 
-    - name: install git
+    - name: Install Git
+      apt: name=git state=latest
 
-    - name: install build-essential
+    - name: Install build-essential
+      apt: name=build-essential state=latest
 
     - name: install node.js
 
@@ -18,5 +21,3 @@
     - name: install bower
 
     - name: install forever
-
-    - name: 
