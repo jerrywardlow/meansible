@@ -6,11 +6,11 @@
     - name: Update apt cache
       apt: update_cache=yes
 
-    - name: Install Git
-      apt: name=git state=latest
-
-    - name: Install build-essential
-      apt: name=build-essential state=latest
+    - name: Install apt packages
+      apt: name={{ item }} state=latest
+      with_items:
+        - git
+        - build-essential
 
     - name: install node.js
 
