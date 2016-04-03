@@ -7,10 +7,11 @@
       apt: update_cache=yes
 
     - name: Install apt packages
-      apt: name={{ item }} state=latest
+      apt: name={{ item }} state=installed
       with_items:
         - git
         - build-essential
+        - curl
 
     - name: install node.js
 
