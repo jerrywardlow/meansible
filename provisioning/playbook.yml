@@ -12,6 +12,7 @@
         - git
         - build-essential
         - curl
+        - htop
 
     - name: install node.js
 
