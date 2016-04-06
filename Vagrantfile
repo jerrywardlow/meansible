@@ -2,7 +2,6 @@
 # vi: set ft=ruby :
 
 Vagrant.configure(2) do |config|
-  config.hostmanager.enabled = true
   config.vm.box = "ubuntu/trusty64"
   config.vm.hostname = "meansible"
   config.vm.network :private_network, ip: "172.111.111.111"
