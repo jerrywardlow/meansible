@@ -15,13 +15,14 @@
         - build-essential
         - curl
         - htop
+        - nodejs
 
-    - name: install node.js
+    # - name: install node.js
 
-    - name: install mongodb
+    # - name: install mongodb
 
-    - name: install express
+    # - name: install express
 
-    - name: install bower
+    # - name: install bower
 
-    - name: install forever
+    # - name: install forever
