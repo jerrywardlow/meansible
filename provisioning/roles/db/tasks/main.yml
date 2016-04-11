@@ -12,3 +12,5 @@
   apt: name=mongodb-org update_cache=yes state=latest
 
 - name: Run mongod daemon
+  sudo: yes
+  service: name=mongod state=started
