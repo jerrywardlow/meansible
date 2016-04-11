@@ -1,0 +1,10 @@
+---
+
+- name: Install basic apt packages
+  apt: name={{ item }} update_cache=yes state=latest
+  with_items:
+    - git
+    - build-essential
+    - curl
+    - htop
+    - nodejs
