@@ -1,16 +1,16 @@
 ---
 - name: Fetch GPG key
-  sudo: yes
+  become: yes
   command: apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
 
 - name: Add MongoDB repository
-  sudo: yes
+  become: yes
   shell: echo 'deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.2 multiverse' | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
 
 - name: Install MongoDB
-  sudo: yes
+  become: yes
   apt: name=mongodb-org update_cache=yes state=latest
 
 - name: Run mongod daemon
-  sudo: yes
+  become: yes
   service: name=mongod state=started
