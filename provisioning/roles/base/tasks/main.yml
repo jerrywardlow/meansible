@@ -7,4 +7,3 @@
     - build-essential
     - curl
     - htop
-    - nodejs # This is less than ideal (outdated) and isn't installing npm on trusty64
