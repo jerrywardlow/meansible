@@ -17,5 +17,5 @@
 
 # This module is just a sample for now
 # - name: Apply mongod configuration file
-#   template: src=test.conf.j2 dest=/what/ever/path
+#   template: src=mongod.conf.j2 dest=/what/ever/path
 #   notify: restart mongod
