@@ -1,0 +1,6 @@
+---
+# Handlers for db tasks
+
+# Restart the mongod service
+- name: restart mongod
+  service: name=mongod state=restarted enabled=yes
