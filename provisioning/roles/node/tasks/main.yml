@@ -14,3 +14,12 @@
   with_items:
     - forever
     - bower
+
+- name: Check which Node.js apps are running
+  command: forever list
+  register: forever_list
+  changed_when: false
+
+- name: Start Node.js app
+  command: forever start /fake/path/app.js
+  when: "forever_list.stdout.find('/fake/path/app.js') == -1"
