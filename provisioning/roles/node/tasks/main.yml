@@ -16,7 +16,7 @@
     - bower
 
 - name: Pull git repo
-  git: repo=git://github.com/jerrywardlow/express-catalog dest=/var/www/express-catalog
+  git: repo={{ git_repo }} dest=/var/www/express-catalog
 
 - name: Install local npm dependencies
   npm: path=/var/www/express-catalog

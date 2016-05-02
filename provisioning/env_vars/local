@@ -1,2 +1,5 @@
 ---
 # Holds variables used during Ansible provisioning
+
+# Git
+git_repo: https://github.com/jerrywardlow/express-catalog
