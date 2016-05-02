@@ -15,6 +15,12 @@
     - forever
     - bower
 
+- name: Pull git repo
+  git: repo=git://github.com/jerrywardlow/express-catalog dest=/var/www/express-catalog
+
+- name: Install local npm dependencies
+  npm: path=/var/www/express-catalog
+
 - name: Check which Node.js apps are running
   command: forever list
   register: forever_list
