@@ -16,10 +16,10 @@
     - bower
 
 - name: Pull git repo
-  git: repo={{ git_repo }} dest=/var/www/express-catalog
+  git: repo={{ git_repo }} dest={{ project_path }}
 
 - name: Install local npm dependencies
-  npm: path=/var/www/express-catalog
+  npm: path={{ project_path }}
 
 - name: Check which Node.js apps are running
   command: forever list
@@ -27,5 +27,5 @@
   changed_when: false
 
 - name: Start Node.js app
-  command: forever start /fake/path/app.js
-  when: "forever_list.stdout.find('/fake/path/app.js') == -1"
+  command: forever start {{ app_path }}
+  when: "forever_list.stdout.find('{{ app_path }}') == -1"
