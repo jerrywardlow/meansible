@@ -5,4 +5,4 @@
 git_repo: https://github.com/jerrywardlow/express-catalog
 project_name: express-catalog
 project_path: /var/www/{{ project_name }}
-app_path: {{ project_path }}/app.js
+app_path: "{{ project_path }}/app.js"
