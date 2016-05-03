@@ -1,0 +1,10 @@
+---
+
+- name: Check which Node.js apps are running
+  command: forever list
+  register: forever_list
+  changed_when: false
+
+- name: Start Node.js app
+  command: forever start {{ app_path }}
+  when: "forever_list.stdout.find('{{ app_path }}') == -1"
