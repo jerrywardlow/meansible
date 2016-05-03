@@ -3,6 +3,8 @@
   become: true
   become_method: sudo
   remote_user: vagrant
+  vars_files:
+    - env_vars/local
 
   roles:
     - base
