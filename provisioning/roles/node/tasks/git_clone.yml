@@ -1,7 +1,7 @@
 ---
 
 - name: Pull git repo for sample Node project
-  git: repo={{ git_repo }} dest={{ project_path }}
+  git: repo={{ git_repo }} dest={{ project_path }} force=yes
 
 - name: Install local npm dependencies
   npm: path={{ project_path }}
