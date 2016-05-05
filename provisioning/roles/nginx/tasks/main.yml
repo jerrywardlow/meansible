@@ -2,3 +2,7 @@
 
 - name: Install NGINX
   apt: name=nginx update_cache=yes state=latest
+
+- name: Start NGINX
+  become: yes
+  service: name=nginx state=started
