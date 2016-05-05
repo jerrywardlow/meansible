@@ -8,5 +8,5 @@
   service: name=nginx state=started
 
 - name: Copy NGINX configuration
-  template: src=test-example.conf dest=/path/to/nginx/thing.conf
+  template: src=meanapp.conf.j2 dest=/etc/nginx/sites-available/default
   notify: restart nginx
