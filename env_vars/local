@@ -5,5 +5,6 @@
 git_repo: https://github.com/jerrywardlow/express-catalog
 project_name: "express-catalog"
 project_path: "/var/www/{{ project_name }}"
+project_user: "vagrant"
 app_path: "{{ project_path }}/app.js"
 app_port: 4130
