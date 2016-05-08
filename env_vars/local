@@ -7,5 +7,6 @@ project_name: "express-catalog"
 project_path: "/var/www/{{ project_name }}"
 project_user: "appuser"
 project_group: "appgroup"
-app_path: "{{ project_path }}/app.js"
+app_path: "{{ project_path }}/app/"
+app_server_path: "{{ app_path }}/app.js"
 app_port: 4130

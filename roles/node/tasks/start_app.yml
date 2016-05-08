@@ -6,5 +6,5 @@
   changed_when: false
 
 - name: Start Node.js app
-  command: forever start {{ app_path }}
-  when: "forever_list.stdout.find('{{ app_path }}') == -1"
+  command: forever start {{ app_server_path }}
+  when: "forever_list.stdout.find('{{ app_server_path }}') == -1"
