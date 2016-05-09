@@ -1,5 +1,8 @@
 ---
 
+- name: Create user home directory if necessary
+  file: path={{ project_path }} state=directory
+
 - name: Create group
   group: name={{ project_group }} state=present
 
