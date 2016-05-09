@@ -2,9 +2,11 @@
 
 - name: Check which Node.js apps are running
   command: pm2 list
+  become: false
   register: pm2_list
   changed_when: false
 
 - name: Start Node.js app
   command: pm2 start {{ app_server_path }} --name {{ project_name }}
+  become: false
   when: "pm2_list.stdout.find('{{ project_name }}') == -1"
