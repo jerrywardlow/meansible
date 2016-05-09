@@ -1,7 +1,8 @@
 ---
 
 - name: Check which Node.js apps are running
-  command: forever list
+  command: sudo forever list
+  become: false
   register: forever_list
   changed_when: false
 
