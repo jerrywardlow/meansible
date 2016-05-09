@@ -1,13 +1,10 @@
 ---
 
 - name: Check which Node.js apps are running
-  command: sudo forever list
-  become: false
-  register: forever_list
+  command: pm2 list
+  register: pm2_list
   changed_when: false
 
 - name: Start Node.js app
-  # Using sudo in command as a workaround for the sudo/su/root issue with starting an app in Forever
-  command: sudo forever start {{ app_server_path }}
-  become: false
-  when: "forever_list.stdout.find('{{ app_server_path }}') == -1"
+  command: pm2 start {{ app_server_path }} --name {{ project_name }}
+  when: "pm2_list.stdout.find('{{ project_name }}') == -1"
