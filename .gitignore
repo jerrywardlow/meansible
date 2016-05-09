@@ -1,0 +1,5 @@
+.vagrant
+TODO
+playbook.retry
+inventories/aws
+env_vars/aws
