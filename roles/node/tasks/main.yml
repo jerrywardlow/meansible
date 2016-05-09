@@ -1,9 +1,9 @@
 ---
 
+- include: git_clone.yml
+
 - include: user.yml
 
 - include: install_node.yml
-
-- include: git_clone.yml
 
 - include: start_app.yml
