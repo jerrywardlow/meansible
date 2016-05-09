@@ -1,0 +1,7 @@
+---
+
+- name: Create group
+  group: name={{ project_group }} state=present
+
+- name: Create user
+  user: name={{ project_user }} group={{ project_group }} home={{ project_path }}
