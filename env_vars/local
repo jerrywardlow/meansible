@@ -14,3 +14,4 @@ app_port: 4130
 # New user for app
 project_user: "appuser"
 project_group: "appgroup"
+project_user_password: $6$slugkiller$Aa0gdMgufk4QIHrC977FsnsxpfRwBaDJ7twc9qzt7tZ0/vFLCrRiU5RyJV6HOCEQX9L//9rcPc0dalcPDeElj1 # "appuser"
