@@ -15,3 +15,8 @@ app_port: 4130
 project_user: "appuser"
 project_group: "appgroup"
 project_user_password: '$6$slugkiller$Aa0gdMgufk4QIHrC977FsnsxpfRwBaDJ7twc9qzt7tZ0/vFLCrRiU5RyJV6HOCEQX9L//9rcPc0dalcPDeElj1' # "appuser"
+
+# Database variables
+mongodb_user: "temp"
+mongodb_pw: "temp"
+app_db: "temp"
