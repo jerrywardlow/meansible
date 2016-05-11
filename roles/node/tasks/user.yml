@@ -7,4 +7,7 @@
   group: name={{ project_group }} state=present
 
 - name: Create user
-  user: name={{ project_user }} password= {{ project_user_password }} group={{ project_group }} home={{ project_path }}
+  user: name={{ project_user }} password={{ project_user_password }} group={{ project_group }} home={{ project_path }}
+
+- name: Set file permissions
+  file: path={{ project_path }} owner={{ project_user }} group={{ project_group }} state=directory recurse=yes
