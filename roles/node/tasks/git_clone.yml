@@ -2,10 +2,10 @@
 
 - name: Pull git repo for sample Node project
   git:
-    repo: {{ git_repo }}
-    dest: {{ app_path }}
+    repo: "{{ git_repo }}"
+    dest: "{{ app_path }}"
     force: yes
 
 - name: Install local npm dependencies
   npm:
-    path: {{ app_path }}
+    path: "{{ app_path }}"
