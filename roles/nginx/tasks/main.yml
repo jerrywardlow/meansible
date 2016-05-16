@@ -1,12 +1,19 @@
 ---
 
 - name: Install NGINX
-  apt: name=nginx update_cache=yes state=latest
+  apt:
+    name: nginx
+    update_cache: yes
+    state: latest
 
 - name: Start NGINX
   become: yes
-  service: name=nginx state=started
+  service:
+    name: nginx
+    state: started
 
 - name: Copy NGINX configuration
-  template: src=meanapp.conf.j2 dest=/etc/nginx/sites-available/default
+  template:
+    src: meanapp.conf.j2
+    dest: /etc/nginx/sites-available/default
   notify: restart nginx

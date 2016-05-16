@@ -3,4 +3,7 @@
 
 # Restart the mongod service
 - name: restart mongod
-  service: name=mongod state=restarted enabled=yes
+  service:
+    name: mongod
+    state: restarted
+    enabled: yes
