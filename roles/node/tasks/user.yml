@@ -24,3 +24,4 @@
     group: "{{ project_group }}"
     state: directory
     recurse: yes
+  changed_when: false
