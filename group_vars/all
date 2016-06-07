@@ -1,5 +1,4 @@
 ---
-# Holds variables used during Ansible provisioning
 
 # Deploy user
 deploy_user: "vagrant"
@@ -8,7 +7,7 @@ deploy_user: "vagrant"
 git_repo: https://github.com/jerrywardlow/express-catalog
 project_name: "express-catalog"
 project_path: "/var/www/{{ project_name }}"
-app_path: "{{ project_path }}/node_app/"
+app_path: "{{ project_path }}/node_app"
 app_server_path: "{{ app_path }}/app.js"
 app_port: 4130
 # New user for app
