@@ -11,3 +11,19 @@
     - build-essential
     - curl
     - htop
+    - ufw
+
+- name: Enable UFW
+  ufw:
+    state: enabled
+    policy: deny
+    logging: "on"
+
+- name: UFW - Enable ports
+  ufw:
+    rule: allow
+    port: "{{ item }}"
+  with_items:
+    - "22"
+    - "80"
+    - "443"
