@@ -12,6 +12,7 @@
     - curl
     - htop
     - ufw
+    - tree
 
 - name: Enable UFW
   ufw:
