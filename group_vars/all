@@ -7,6 +7,18 @@ base_packages:
   - curl
   - ufw
 
+# UFW Ports
+ufw_ports:
+  - port: 22
+    from: any
+    rule: limit
+  - port: 80
+    from: any
+    rule: allow
+  - port: 443
+    from: any
+    rule: allow
+
 # Node app
 git_repo: https://github.com/jerrywardlow/express-catalog
 project_name: "express-catalog"
