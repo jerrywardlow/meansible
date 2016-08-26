@@ -9,9 +9,4 @@ Vagrant.configure(2) do |config|
     v.name = "meansible"
     v.memory = "1024"
   end
-  config.vm.provision :ansible do |ansible|
-    ansible.playbook = "playbook.yml"
-    ansible.inventory_path = "hosts"
-    ansible.limit = "all"
-  end
 end
