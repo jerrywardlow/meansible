@@ -7,6 +7,6 @@ Vagrant.configure(2) do |config|
   config.vm.network :private_network, ip: "172.28.128.99"
   config.vm.provider :virtualbox do |v|
     v.name = "meansible"
-    v.memory = "1024"
+    v.memory = "512"
   end
 end
